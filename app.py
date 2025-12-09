@@ -75,8 +75,6 @@ elif page == "About Us":
                 to use artificial intelligence to solve real-world educational challenges.
             </p>
 
-            <h3 style='color:#2A6DB0;'>Our Mission</h3>
-            <p style='font-size: 17px; color:#333;'>
                 To build inclusive, accessible, and supportive learning tools for every student.
             </p>
         </div>
