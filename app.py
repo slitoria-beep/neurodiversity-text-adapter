@@ -47,10 +47,10 @@ if page == "Home":
     st.markdown("""
         <div style='background-color:#E2F7E1; padding: 30px; border-radius: 15px; margin-bottom: 20px;'>
             <h1 style='text-align: center; color: #2A6DB0; margin-bottom: 5px;'>
-                Welcome to our AI Capstone Project
+                A calm, comfortable space designed for neurodiverse learners
             </h1>
             <p style='text-align: center; font-size: 18px; color: #3A3A3A;'>
-                A calm, comfortable space designed for neurodiverse learners
+                Created to help every learner feel confident, included, and understood.
             </p>
         </div>
 
