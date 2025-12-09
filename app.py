@@ -19,23 +19,43 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+# ---------------------- TOP LOGO BANNER ----------------------
+st.markdown("""
+<div style='background-color:#E8F1FA; padding: 25px; border-radius: 10px; margin-bottom: 20px;'>
+    <h1 style='text-align:center; color:#2A6DB0; margin:0; font-weight:700;'>
+        AI TEAM DMMS
+    </h1>
+    <p style='text-align:center; color:#555; margin-top:8px; font-size:16px;'>
+        AI Accessibility Adapter — CBSE AI Capstone Project, DPSBE
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
 # ---------------------- SIDEBAR NAVIGATION ----------------------
 st.sidebar.title("📌 Navigation")
+st.sidebar.markdown("""
+<h3 style='color:#2A6DB0; text-align:center;'>AI TEAM DMMS</h3>
+<hr>
+""", unsafe_allow_html=True)
+
 page = st.sidebar.radio("Go to:", ["Home", "About Us", "Text Adapter"])
 
 # ---------------------- HOME PAGE ----------------------
 if page == "Home":
     st.markdown("""
-        <h1 style='text-align: center; color: #2A6DB0; margin-bottom: -10px;'>
-            Welcome to Our AI Capstone Project
-        </h1>
-        <p style='text-align: center; font-size: 18px; color: #555;'>
-            Supporting neurodiverse learners with ADHD, Dyslexia, and Autism
-        </p>
-        <br>
-        <div style='background-color: #F5F9FF; padding: 20px; border-radius: 12px;'>
-            <h3 style='color:#2A6DB0;'>👥 Team Members</h3>
-            <p style='font-size: 17px; color:#333;'>
+        <div style='background-color:#F2F7FF; padding: 30px; border-radius: 15px; margin-bottom: 20px;'>
+            <h1 style='text-align: center; color: #2A6DB0; margin-bottom: 5px;'>
+                Welcome to Our AI Capstone Project
+            </h1>
+            <p style='text-align: center; font-size: 18px; color: #4A4A4A;'>
+                A calm, comfortable space designed for neurodiverse learners
+            </p>
+        </div>
+
+        <div style='background-color: #FFFFFF; padding: 25px; border-radius: 15px;
+                    box-shadow: 0 4px 10px rgba(0,0,0,0.05);'>
+            <h3 style='color:#2A6DB0; margin-bottom:10px;'>👥 Team Members — AI TEAM DMMS</h3>
+            <p style='font-size: 17px; color:#333; line-height:1.6;'>
                 Swasti<br>
                 Mritika<br>
                 Deepshikha<br>
@@ -51,7 +71,7 @@ elif page == "About Us":
             About Us
         </h1>
         <p style='font-size: 17px; color:#333; text-align: justify;'>
-            We are a student team from DPS Bangalore East working on an AI-powered accessibility tool 
+            We are a student team from DPSBE working on an AI-powered accessibility tool 
             for neurodiverse learners. Our goal is to make school content easier 
             to read, understand, and engage with for students with ADHD, Dyslexia, 
             and Autism.
@@ -230,6 +250,6 @@ elif page == "Text Adapter":
 st.markdown("""
 <hr>
 <p style='text-align:center; color: grey;'>
-Built by Swasti, Mritika, Deepshikha, Madhav of DPSBE — CBSE AI Capstone Project
+Built by AI TEAM DMMS — Swasti, Mritika, Deepshikha, Madhav — DPSBE
 </p>
 """, unsafe_allow_html=True)
