@@ -2,7 +2,7 @@ import streamlit as st
 
 # ---------------------- PAGE CONFIG ----------------------
 st.set_page_config(
-    page_title="AI Accessibility Text Adapter",
+    page_title="AI Accessibility Adapter",
     page_icon="✨",
     layout="centered"
 )
@@ -74,8 +74,14 @@ elif page == "About Us":
                 This project is part of our CBSE AI Capstone initiative, where we aim 
                 to use artificial intelligence to solve real-world educational challenges.
             </p>
+        </div>
 
-                To build inclusive, accessible, and supportive learning tools for every student.
+        <div style='background-color:#DFF5D8; padding: 25px; border-radius: 15px;
+                    box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-top: 20px;'>
+            <h3 style='color:#2A6DB0;'>Our Mission</h3>
+            <p style='font-size: 17px; color:#333;'>
+                To build inclusive, accessible, and supportive learning tools for every student — 
+                especially those with diverse learning needs.
             </p>
         </div>
     """, unsafe_allow_html=True)
@@ -226,6 +232,4 @@ elif page == "Text Adapter":
 st.markdown("""
 <hr>
 <p style='text-align:center; color: grey;'>
-Built by Swasti, Mritika, Deepshikha, Madhav — CBSE AI Capstone Project, DPSBE
-</p>
-""", unsafe_allow_html=True)
+Built by Swasti, M
