@@ -77,7 +77,7 @@ elif page == "About Us":
         and Autism.
         <br><br>
         This project is part of our CBSE AI Capstone initiative, where we aim 
-        to use artificial intelligence to solve real-world educational challenges.
+        to use artificial intelligence to solve real-world global challenges.
     </p>
 </div>
 
