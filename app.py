@@ -51,7 +51,7 @@ elif page == "About Us":
             About Us
         </h1>
         <p style='font-size: 17px; color:#333; text-align: justify;'>
-            We are a student team working on an AI-powered accessibility tool 
+            We are a student team from DPS Bangalore East working on an AI-powered accessibility tool 
             for neurodiverse learners. Our goal is to make school content easier 
             to read, understand, and engage with for students with ADHD, Dyslexia, 
             and Autism.
