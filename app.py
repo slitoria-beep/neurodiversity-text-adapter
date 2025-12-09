@@ -2,12 +2,12 @@ import streamlit as st
 
 # ---------------------- PAGE CONFIG ----------------------
 st.set_page_config(
-    page_title="AI Accessibility Adapter",
+    page_title="AI Accessibility Text Adapter",
     page_icon="✨",
     layout="centered"
 )
 
-# ---------------------- GLOBAL FONT STYLE ----------------------
+# ---------------------- GLOBAL FONT + BACKGROUND ----------------------
 st.markdown("""
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
@@ -17,23 +17,10 @@ st.markdown("""
             letter-spacing: 1px;
         }
 
-        /* ✅ Soft Blue Background */
         .main {
             background-color: #EAF3FF !important;
         }
     </style>
-""", unsafe_allow_html=True)
-
-# ---------------------- TOP BANNER ----------------------
-st.markdown("""
-<div style='background-color:#DCEBFF; padding: 25px; border-radius: 10px; margin-bottom: 20px;'>
-    <h1 style='text-align:center; color:#2A6DB0; margin:0; font-weight:700;'>
-        Welcome to our AI Capstone Project
-    </h1>
-    <p style='text-align:center; color:#555; margin-top:8px; font-size:16px;'>
-        AI Accessibility Adapter — CBSE AI Capstone Project, DPSBE
-    </p>
-</div>
 """, unsafe_allow_html=True)
 
 # ---------------------- SIDEBAR NAVIGATION ----------------------
@@ -45,12 +32,18 @@ page = st.sidebar.radio("Go to:", ["Home", "About Us", "Text Adapter"])
 # ---------------------- HOME PAGE ----------------------
 if page == "Home":
     st.markdown("""
-        <div style='background-color:#E2F7E1; padding: 30px; border-radius: 15px; margin-bottom: 20px;'>
-            <h1 style='text-align: center; color: #2A6DB0; margin-bottom: 5px;'>
-                A calm, comfortable space designed for neurodiverse learners
+        <div style='background-color:#DCEBFF; padding: 25px; border-radius: 10px; margin-bottom: 20px;'>
+            <h1 style='text-align:center; color:#2A6DB0; margin:0; font-weight:700;'>
+                Welcome to our AI Capstone Project
             </h1>
+            <p style='text-align:center; color:#555; margin-top:8px; font-size:16px;'>
+                AI Accessibility Adapter — CBSE AI Capstone Project, DPSBE
+            </p>
+        </div>
+
+        <div style='background-color:#E2F7E1; padding: 30px; border-radius: 15px; margin-bottom: 20px;'>
             <p style='text-align: center; font-size: 18px; color: #3A3A3A;'>
-                Created to help every learner feel confident, included, and understood.
+                A calm, comfortable space designed for neurodiverse learners
             </p>
         </div>
 
@@ -69,14 +62,9 @@ if page == "Home":
 # ---------------------- ABOUT US PAGE ----------------------
 elif page == "About Us":
     st.markdown("""
-        <div style='background-color:#E2F7E1; padding: 30px; border-radius: 15px; margin-bottom: 20px;'>
-            <h1 style='text-align: center; color: #2A6DB0;'>
-                About Us
-            </h1>
-        </div>
-
         <div style='background-color:#DFF5D8; padding: 25px; border-radius: 15px;
                     box-shadow: 0 4px 10px rgba(0,0,0,0.05);'>
+            <h2 style='color:#2A6DB0;'>About Us</h2>
             <p style='font-size: 17px; color:#333; text-align: justify;'>
                 We are a student team from DPSBE working on an AI-powered accessibility tool 
                 for neurodiverse learners. Our goal is to make school content easier 
@@ -106,7 +94,7 @@ elif page == "Text Adapter":
     if st.button("Adapt Text"):
 
         # -----------------------------
-        # ✅ ADHD MODE (UNCHANGED)
+        # ✅ ADHD MODE
         # -----------------------------
         if profile == "ADHD":
             import re
@@ -161,7 +149,7 @@ elif page == "Text Adapter":
             )
 
         # -----------------------------
-        # ✅ DYSLEXIA MODE (UNCHANGED)
+        # ✅ DYSLEXIA MODE
         # -----------------------------
         elif profile == "Dyslexia":
             import re
@@ -189,7 +177,7 @@ elif page == "Text Adapter":
             )
 
         # -----------------------------
-        # ✅ AUTISM MODE (UNCHANGED)
+        # ✅ AUTISM MODE
         # -----------------------------
         elif profile == "Autism":
             import re
@@ -240,6 +228,6 @@ elif page == "Text Adapter":
 st.markdown("""
 <hr>
 <p style='text-align:center; color: grey;'>
-CBSE AI Capstone Project — DPSBE
+Built by Swasti, Mritika, Deepshikha, Madhav — CBSE AI Capstone Project, DPSBE
 </p>
 """, unsafe_allow_html=True)
