@@ -16,14 +16,19 @@ st.markdown("""
             font-family: 'Open Sans', sans-serif !important;
             letter-spacing: 1px;
         }
+
+        /* ✅ Soft Blue Background */
+        .main {
+            background-color: #EAF3FF !important;
+        }
     </style>
 """, unsafe_allow_html=True)
 
-# ---------------------- TOP LOGO BANNER ----------------------
+# ---------------------- TOP BANNER ----------------------
 st.markdown("""
-<div style='background-color:#E8F1FA; padding: 25px; border-radius: 10px; margin-bottom: 20px;'>
+<div style='background-color:#DCEBFF; padding: 25px; border-radius: 10px; margin-bottom: 20px;'>
     <h1 style='text-align:center; color:#2A6DB0; margin:0; font-weight:700;'>
-        AI TEAM DMMS
+        Welcome to our AI Capstone Project
     </h1>
     <p style='text-align:center; color:#555; margin-top:8px; font-size:16px;'>
         AI Accessibility Adapter — CBSE AI Capstone Project, DPSBE
@@ -33,28 +38,25 @@ st.markdown("""
 
 # ---------------------- SIDEBAR NAVIGATION ----------------------
 st.sidebar.title("📌 Navigation")
-st.sidebar.markdown("""
-<h3 style='color:#2A6DB0; text-align:center;'>AI TEAM DMMS</h3>
-<hr>
-""", unsafe_allow_html=True)
+st.sidebar.markdown("<hr>", unsafe_allow_html=True)
 
 page = st.sidebar.radio("Go to:", ["Home", "About Us", "Text Adapter"])
 
 # ---------------------- HOME PAGE ----------------------
 if page == "Home":
     st.markdown("""
-        <div style='background-color:#F2F7FF; padding: 30px; border-radius: 15px; margin-bottom: 20px;'>
+        <div style='background-color:#E2F7E1; padding: 30px; border-radius: 15px; margin-bottom: 20px;'>
             <h1 style='text-align: center; color: #2A6DB0; margin-bottom: 5px;'>
-                Welcome to Our AI Capstone Project
+                Welcome to our AI Capstone Project
             </h1>
-            <p style='text-align: center; font-size: 18px; color: #4A4A4A;'>
+            <p style='text-align: center; font-size: 18px; color: #3A3A3A;'>
                 A calm, comfortable space designed for neurodiverse learners
             </p>
         </div>
 
-        <div style='background-color: #FFFFFF; padding: 25px; border-radius: 15px;
+        <div style='background-color: #DFF5D8; padding: 25px; border-radius: 15px;
                     box-shadow: 0 4px 10px rgba(0,0,0,0.05);'>
-            <h3 style='color:#2A6DB0; margin-bottom:10px;'>👥 Team Members — AI TEAM DMMS</h3>
+            <h3 style='color:#2A6DB0; margin-bottom:10px;'>👥 Team Members</h3>
             <p style='font-size: 17px; color:#333; line-height:1.6;'>
                 Swasti<br>
                 Mritika<br>
@@ -67,20 +69,24 @@ if page == "Home":
 # ---------------------- ABOUT US PAGE ----------------------
 elif page == "About Us":
     st.markdown("""
-        <h1 style='text-align: center; color: #2A6DB0;'>
-            About Us
-        </h1>
-        <p style='font-size: 17px; color:#333; text-align: justify;'>
-            We are a student team from DPSBE working on an AI-powered accessibility tool 
-            for neurodiverse learners. Our goal is to make school content easier 
-            to read, understand, and engage with for students with ADHD, Dyslexia, 
-            and Autism.
-            <br><br>
-            This project is part of our CBSE AI Capstone initiative, where we aim 
-            to use artificial intelligence to solve real-world educational challenges.
-        </p>
-        <br>
-        <div style='background-color: #F5F9FF; padding: 20px; border-radius: 12px;'>
+        <div style='background-color:#E2F7E1; padding: 30px; border-radius: 15px; margin-bottom: 20px;'>
+            <h1 style='text-align: center; color: #2A6DB0;'>
+                About Us
+            </h1>
+        </div>
+
+        <div style='background-color:#DFF5D8; padding: 25px; border-radius: 15px;
+                    box-shadow: 0 4px 10px rgba(0,0,0,0.05);'>
+            <p style='font-size: 17px; color:#333; text-align: justify;'>
+                We are a student team from DPSBE working on an AI-powered accessibility tool 
+                for neurodiverse learners. Our goal is to make school content easier 
+                to read, understand, and engage with for students with ADHD, Dyslexia, 
+                and Autism.
+                <br><br>
+                This project is part of our CBSE AI Capstone initiative, where we aim 
+                to use artificial intelligence to solve real-world educational challenges.
+            </p>
+
             <h3 style='color:#2A6DB0;'>Our Mission</h3>
             <p style='font-size: 17px; color:#333;'>
                 To build inclusive, accessible, and supportive learning tools for every student.
@@ -145,7 +151,14 @@ elif page == "Text Adapter":
                 final_output += f"**Summary:** {topic}\n\n"
                 final_output += "---\n\n"
 
-            st.markdown(final_output)
+            st.markdown(
+                f"""
+                <div style='background-color:#DFF5D8; padding:20px; border-radius:12px;'>
+                    {final_output}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
 
         # -----------------------------
         # ✅ DYSLEXIA MODE (UNCHANGED)
@@ -168,19 +181,7 @@ elif page == "Text Adapter":
 
             st.markdown(
                 f"""
-                <div id="dyslexiaText" style="
-                    font-family: 'Lexend', sans-serif;
-                    font-size: 22px;
-                    line-height: 1.9;
-                    letter-spacing: 0.8px;
-                    text-align: left;
-                    color: #222;
-                    background-color: #f5f5f5;
-                    padding: 22px;
-                    border-radius: 10px;
-                    border-left: 8px solid #4a90e2;
-                    margin-top: 15px;
-                ">
+                <div style='background-color:#DFF5D8; padding:20px; border-radius:12px;'>
                     {adapted}
                 </div>
                 """,
@@ -228,18 +229,7 @@ elif page == "Text Adapter":
 
             st.markdown(
                 f"""
-                <div style="
-                    font-family: 'Open Sans', sans-serif;
-                    font-size: 18px;
-                    line-height: 1.7;
-                    letter-spacing: 0.4px;
-                    text-align: left;
-                    color: #202124;
-                    background-color: #f8f9fa;
-                    padding: 18px;
-                    border-radius: 8px;
-                    border: 1px solid #e0e0e0;
-                ">
+                <div style='background-color:#DFF5D8; padding:20px; border-radius:12px;'>
                     {final_output}
                 </div>
                 """,
@@ -250,6 +240,6 @@ elif page == "Text Adapter":
 st.markdown("""
 <hr>
 <p style='text-align:center; color: grey;'>
-Built by AI TEAM DMMS — Swasti, Mritika, Deepshikha, Madhav — DPSBE
+CBSE AI Capstone Project — DPSBE
 </p>
 """, unsafe_allow_html=True)
